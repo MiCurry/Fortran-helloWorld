@@ -2,7 +2,8 @@ language: c
 
 before_install:
 - sudo apt-get install gfortran
+- sudo apt-get install mpich
 
 script:
 - make
-- ./helloWorld
+- mpiexec -n 1 helloWorld
